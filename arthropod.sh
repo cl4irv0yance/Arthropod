@@ -16,6 +16,8 @@ tput bold; echo "Version: 1.0"
 }
 
 banner
+tput setaf 3
+tput bold; echo "-------------------------------------------------------"
 
 if [ "$1" == "" ]
 then
@@ -23,9 +25,11 @@ echo "Please enter the ip in the following format: 192.168.1"
 
 else
 
-echo "Select what you would like to run:"
-echo " 1 is for FPING"
-echo " 2 is for NMAP"
+tput bold; echo "Select what you would like to run:"
+tput bold; echo " [1] is for FPING"
+tput bold; echo " [2] is for NMAP"
+tput bold; echo "Any other character will run them both for you :)."
+echo "-------------------------------------------------------"
 read VAR
 
 if [[ $VAR == 1 ]]
@@ -34,13 +38,12 @@ if [[ $VAR == 1 ]]
             fping -g -r 1 $1.0/24 2>/dev/null | tee "$1".fping.txt
         done
 
-    else [[ $Var == 2 ]]
+    else [[ $VAR == 2 ]]
 
 	   for subnet; do
             sudo nmap -T4 -Pn -p 22,80,111,443,1024,2049,4440,5001,8080,8081,8082,8443,21069,40814,65535 $1.0/24 --open -oN "$1".nmap.txt
        done
     fi 
 fi
-
 
 
