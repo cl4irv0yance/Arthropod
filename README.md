@@ -15,8 +15,9 @@ All you need to do is enter in a subnet like the following:
 
 <code> ./arthropod.sh 192.168.1 </code>
 
-The tool will do the rest once you select what you want. 
+The script will do the rest once you select what you want. 
 
+After the script is finished, it will save the output to a text file for you. 
 
 ------------------------------------------------
 
