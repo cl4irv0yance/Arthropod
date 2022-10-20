@@ -13,7 +13,7 @@ It can be edited to suit any needs.
 
 All you need to do is enter in a subnet like the following:
 
-./arthropod.sh 192.168.1 
+<code> ./arthropod.sh 192.168.1 </code>
 
 The tool will do the rest once you select what you want. 
 
