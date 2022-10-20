@@ -11,4 +11,4 @@ It can be edited to suit any needs.
 
 <h1> Note </h1>
 
-Currently, using any other character outside of the menu options, will allow you to run both fping & nmap together. 
+Currently, using any other character outside of the menu options will allow you to run both fping & nmap together. 
